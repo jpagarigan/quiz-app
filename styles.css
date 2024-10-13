@@ -1,0 +1,27 @@
+#quiz-container {
+    text-align: center;
+    margin: 50px auto;
+    width: 50%;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#choices button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#next-btn {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+}

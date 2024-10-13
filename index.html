@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Quiz App</title>
+</head>
+<body>
+    <div id="quiz-container">
+        <h1 id="title">Select Quiz Type</h1>
+        <button id="constants-btn" onclick="startQuiz('constants')">Scientific Constants</button>
+        <button id="conversions-btn" onclick="startQuiz('conversions')">Metric Conversions</button>
+
+        <h2 id="question" style="display: none;">Loading question...</h2>
+        <div id="choices" style="display: none;"></div>
+        <button id="next-btn" onclick="getNextQuestion()" style="display:none;">Next</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
