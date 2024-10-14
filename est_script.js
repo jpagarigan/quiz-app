@@ -10,10 +10,10 @@ let selectedNumberOfQuestions = 5; // Default number of questions
 // Function to get the selected dataset
 function getDataset(choice) {
     // Assume you have separate dictionaries for each subject
-    if (choice === 'electronics') return elex_subject; // Adjust accordingly for other subjects
-    if (choice === 'mathematics') return math_subject; // Adjust accordingly for other subjects
-    if (choice === 'geas') return geas_subject; // Adjust accordingly for other subjects
-    if (choice === 'est') return est_subject; // Adjust accordingly for other subjects
+    if (choice === 'est1') return est_subject; // Adjust accordingly for other subjects
+    if (choice === 'est1') return est_subject; // Adjust accordingly for other subjects
+    if (choice === 'est1') return est_subject; // Adjust accordingly for other subjects
+    if (choice === 'est1') return est_subject; // Adjust accordingly for other subjects
 }
 
 // Function to set the number of questions

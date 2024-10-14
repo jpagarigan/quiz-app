@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Concepts Quiz</title>
+    <title>MATHEMATICS Quiz</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
     <style>
         /* Add styles for the small green button */
@@ -32,10 +32,10 @@
         <!-- Dataset Selection -->
         <div id="dataset-selection">
             <h2>Select Subject</h2>
-            <button id="electronics-btn" onclick="selectOrderAndMode('electronics')">Electronics</button>
-            <button id="mathematics-btn" onclick="selectOrderAndMode('mathematics')">Mathematics</button>
-            <button id="geas-btn" onclick="selectOrderAndMode('geas')">GEAS</button>
-            <button id="est-btn" onclick="selectOrderAndMode('est')">EST</button>
+            <button id="math1-btn" onclick="selectOrderAndMode('math1')">MATH 1</button>
+            <button id="math2-btn" onclick="selectOrderAndMode('math2')">MATH 2</button>
+            <button id="math3-btn" onclick="selectOrderAndMode('math3')">MATH 3</button>
+            <button id="math4-btn" onclick="selectOrderAndMode('math4')">MATH 4</button>
         </div>
 
         <!-- Number of Questions Selection -->
@@ -45,6 +45,7 @@
             <button onclick="setNumberOfQuestions(10)">10 Questions</button>
             <button onclick="setNumberOfQuestions(15)">15 Questions</button>
             <button onclick="setNumberOfQuestions(20)">20 Questions</button>
+            <button onclick="setNumberOfQuestions(50)">50 Questions</button>
         </div>
 
         <!-- Question Section -->
@@ -71,11 +72,9 @@
             <button id="popup-close" onclick="closePopup()">OK</button>
         </div>
     </div>
-    <script src="elex_dict.js"></script>
     <script src="math_dict.js"></script>
-    <script src="geas_dict.js"></script>
-    <script src="est_dict.js"></script>
-    <script src="concepts_script.js"></script> <!-- Link to your JS file -->
+
+    <script src="math_script.js"></script> <!-- Link to your JS file -->
     <script>
         // Function to navigate to the homepage
         function goToHomePage() {
