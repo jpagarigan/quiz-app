@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
+    <title>Calculator Quiz</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Add styles for the small green button */
+        .home-button {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* No border */
+            padding: 5px 10px; /* Small padding */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* No underline */
+            display: inline-block; /* Inline block */
+            font-size: 14px; /* Small font size */
+            cursor: pointer; /* Pointer cursor */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        .home-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
 </head>
 <body>
     <div id="quiz-container">
@@ -13,8 +32,8 @@
         <!-- Dataset Selection -->
         <div id="dataset-selection">
             <h2>Select Dataset</h2>
-            <button id="constants-btn" onclick="selectOrderAndMode('constants')">Scientific Constants</button>
-            <button id="conversions-btn" onclick="selectOrderAndMode('conversions')">Metric Conversions</button>
+            <button id="constants-btn" onclick="selectOrderAndMode('constants')">Scientific Calculator Constants</button>
+            <button id="conversions-btn" onclick="selectOrderAndMode('conversions')">Metric Calculator Conversions</button>
         </div>
 
         <!-- Order Selection (Chronological or Randomized) -->
@@ -43,6 +62,11 @@
             <button id="restart-btn" style="display: none;" onclick="goToStart()">Back to Start</button>
         </div>
 
+        <!-- Home Button -->
+        <div id="home-button-container" style="margin-top: 20px;">
+            <button class="home-button" onclick="goToHomePage()">Home</button>
+        </div>
+
     </div>
 
     <!-- Popup for correct/wrong answers -->
@@ -52,7 +76,13 @@
             <button id="popup-close" onclick="closePopup()">OK</button>
         </div>
     </div>
-    <script src="dict.js"></script>
-    <script src="script.js"></script> <!-- Link to your JS file -->
+    <script src="calculator_dict.js"></script>
+    <script src="calculator_quiz_script.js"></script> <!-- Link to your JS file -->
+    <script>
+        // Function to navigate to the homepage
+        function goToHomePage() {
+            window.location.href = 'landingpage.html'; // Change this if your homepage URL is different
+        }
+    </script>
 </body>
 </html>

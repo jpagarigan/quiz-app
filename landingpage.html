@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming you have the CSS in styles.css -->
+    <style>
+        /* Global Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Container for the quiz */
+        #quiz-container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            text-align: center;
+            color: #3a3a3a;
+            font-weight: bold;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+
+        button:hover:not(:disabled) {
+            background-color: #0056b3;
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 768px) {
+            #quiz-container {
+                padding: 15px;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>ECE Reviewer</h1>
+        <h2>Choose a Section</h2>
+        <button onclick="location.href='calculator.html'">Calculator Shortcut Quiz</button>
+        <button onclick="location.href='concepts.html'">Concepts Quiz</button>
+        <button onclick="location.href='problems.html'">Problems</button>
+        <button onclick="location.href='excess1.html'">Excess Section 1</button>
+        <button onclick="location.href='excess2.html'">Excess Section 2</button>
+    </div>
+</body>
+</html>

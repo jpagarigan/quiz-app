@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepts Quiz</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Add styles for the small green button */
+        .home-button {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            border: none; /* No border */
+            padding: 5px 10px; /* Small padding */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* No underline */
+            display: inline-block; /* Inline block */
+            font-size: 14px; /* Small font size */
+            cursor: pointer; /* Pointer cursor */
+            border-radius: 4px; /* Rounded corners */
+        }
+
+        .home-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <h1>Welcome to the Quiz!</h1>
+
+        <!-- Dataset Selection -->
+        <div id="dataset-selection">
+            <h2>Select Subject</h2>
+            <button id="electronics-btn" onclick="selectOrderAndMode('electronics')">Electronics</button>
+            <button id="mathematics-btn" onclick="selectOrderAndMode('mathematics')">Mathematics</button>
+            <button id="geas-btn" onclick="selectOrderAndMode('geas')">GEAS</button>
+            <button id="est-btn" onclick="selectOrderAndMode('est')">EST</button>
+        </div>
+
+        <!-- Number of Questions Selection -->
+        <div id="question-selection" style="display: none;">
+            <h2>Select Number of Questions</h2>
+            <button onclick="setNumberOfQuestions(5)">5 Questions</button>
+            <button onclick="setNumberOfQuestions(10)">10 Questions</button>
+            <button onclick="setNumberOfQuestions(15)">15 Questions</button>
+            <button onclick="setNumberOfQuestions(20)">20 Questions</button>
+        </div>
+
+        <!-- Question Section -->
+        <div id="question-section" style="display: none;">
+            <h2 id="question"></h2>
+            <div id="choices"></div>
+            <p id="feedback" style="color: #007BFF; font-weight: bold;"></p> <!-- Feedback displayed here -->
+            <button id="next-btn" style="display: none;" onclick="nextQuestion()">Next Question</button>
+            <h3 id="score-summary" style="display: none;"></h3>
+            <button id="restart-btn" style="display: none;" onclick="goToStart()">Back to Start</button>
+        </div>
+
+        <!-- Home Button -->
+        <div id="home-button-container" style="margin-top: 20px;">
+            <button class="home-button" onclick="goToHomePage()">Home</button>
+        </div>
+
+    </div>
+
+    <!-- Popup for correct/wrong answers -->
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span id="popup-message"></span>
+            <button id="popup-close" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+    <script src="elex_dict.js"></script>
+    <script src="math_dict.js"></script>
+    <script src="geas_dict.js"></script>
+    <script src="est_dict.js"></script>
+    <script src="concepts_script.js"></script> <!-- Link to your JS file -->
+    <script>
+        // Function to navigate to the homepage
+        function goToHomePage() {
+            window.location.href = 'landingpage.html'; // Change this if your homepage URL is different
+        }
+    </script>
+</body>
+</html>
