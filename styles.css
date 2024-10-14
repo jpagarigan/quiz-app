@@ -99,3 +99,43 @@ button:hover:not(:disabled) {
         font-size: 14px;
     }
 }
+
+
+/* Header */
+#header {
+    color: #333; /* Dark text color */
+    padding: 15px 0; /* Padding for top and bottom */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative; /* To position the pseudo-element */
+}
+
+#header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Position at the bottom */
+    height: 5px; /* Height of the line */
+    background-color: #007BFF; /* Blue color */
+}
+
+/* Footer */
+#footer {
+    color: #333; /* Dark text color */
+    padding: 15px 0; /* Padding for top and bottom */
+    text-align: center;
+    font-size: 14px;
+    position: relative; /* To position the pseudo-element */
+}
+
+#footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0; /* Position at the top */
+    height: 5px; /* Height of the line */
+    background-color: #007BFF; /* Blue color */
+}

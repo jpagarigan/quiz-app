@@ -14,24 +14,37 @@
             margin: 0;
             padding: 20px;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column; /* Adjusted to allow header and footer */
             height: 100vh;
             box-sizing: border-box;
         }
 
+        /* Header Styling */
+        #header {
+            color: #333;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+            background-color: #f4f4f4; /* Background color for header */
+            border-bottom: 5px solid #007BFF; /* Bottom border */
+        }
+
         /* Container for the quiz */
         #quiz-container {
+            flex: 1; /* Allows the container to take available space */
             max-width: 600px;
             width: 100%;
             background: white;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto; /* Center container with margin */
         }
 
         /* Typography */
-        h1, h2, h3 {
+        h2, h3 {
             text-align: center;
             color: #3a3a3a;
             font-weight: bold;
@@ -59,6 +72,17 @@
             background-color: #0056b3;
         }
 
+        /* Footer Styling */
+        #footer {
+            color: #333;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 14px;
+            position: relative;
+            background-color: #f4f4f4; /* Background color for footer */
+            border-top: 5px solid #007BFF; /* Top border */
+        }
+
         /* Responsive for smaller screens */
         @media (max-width: 768px) {
             #quiz-container {
@@ -73,14 +97,21 @@
     </style>
 </head>
 <body>
+    <div id="header">
+        ECE Reviewer Landing Page
+    </div>
+
     <div id="quiz-container">
-        <h1>ECE Reviewer</h1>
         <h2>Choose a Subject</h2>
         <button onclick="location.href='calculator.html'">CALCULATOR SHORTCUTS</button>
         <button onclick="location.href='elex.html'">ELEX</button>
         <button onclick="location.href='est.html'">EST</button>
         <button onclick="location.href='geas.html'">GEAS</button>
         <button onclick="location.href='math.html'">MATHEMATICS</button>
+    </div>
+
+    <div id="footer">
+        &copy; ECE Reviewer. All Rights Reserved.
     </div>
 </body>
 </html>
